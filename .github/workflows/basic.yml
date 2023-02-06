@@ -25,7 +25,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE
       - uses: actions/checkout@v3
-      
+
+  # This job does the core processing
+  process:
+
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
@@ -35,10 +42,3 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-  # This job does the core processing
-  process:
-
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    steps:
